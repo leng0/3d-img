@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <link href="index.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="jquery.js"></script>
+ 
+    <script type="text/javascript">
+        // alert( 64 / Math.tan(20 / 180 * Math.PI));
+        var transform = function (element, value, key)
+        {
+            key = key || "Transform";
+            ["Moz", "O", "Ms", "Webkit", ""].forEach(function (prefix)
+            {
+                element.style[prefix + key] = value;
+            });
+ 
+            return element;
+        }
+ 
+ 
+        $(function ()
+        {
+            var deg = -40 , i = 1;
+            $("#container").click(function ()
+            {
+                transform($(this)[0], "rotateY(" + (deg * i++) + "deg)")
+            });
+        });
+ 
+    </script>
+ 
+   
+ 
+</head>
+<body>
+<div id="stage">
+    <ul id="container">
+        <li>
+            <img src="img/1.jpg"/>
+            <span>Whenever I want you ,I will be accompanyed by the memory of</span>
+        </li>
+        <li>
+            <img src="img/2.jpg"/> <span>Within you I lose myself</span>
+        </li>
+        <li>
+            <img src="img/3.jpg"/> <span> Is missing you in the dream</span>
+        </li>
+        <li>
+            <img src="img/4.jpg"/> <span> I want to love you all the time</span>
+        </li>
+        <li>
+            <img src="img/5.jpg"/> <span>If I know what love is, it is because of you.</span>
+        </li>
+        <li>
+            <img src="img/6.jpg"/> <span>You make my heart smile.</span>
+        </li>
+        <li>
+            <img src="img/7.jpg"/> <span>The two most beautiful things are: sleep with you.</span>
+        </li>
+        <li>
+            <img src="img/8.jpg"/> <span>Tanabata Festival.</span>
+        </li>
+        <li>
+            <img src="img/9.jpg"/> <span>I Love You.</span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
